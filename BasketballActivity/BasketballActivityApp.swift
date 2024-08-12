@@ -9,7 +9,6 @@ import SwiftUI
 
 @main
 struct BasketballActivityApp: App {
-    let persistenceController = PersistenceController.shared
 
     var body: some Scene {
         WindowGroup {
