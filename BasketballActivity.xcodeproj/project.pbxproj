@@ -6,14 +6,65 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		A9C8D3E62C6F525B00131B6C /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9C8D3E52C6F525B00131B6C /* WidgetKit.framework */; };
+		A9C8D3E82C6F525B00131B6C /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9C8D3E72C6F525B00131B6C /* SwiftUI.framework */; };
+		A9C8D3F52C6F525C00131B6C /* GameWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = A9C8D3E32C6F525B00131B6C /* GameWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A9C8D3F32C6F525C00131B6C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A98C00D02C6A9D0300E6497F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A9C8D3E22C6F525B00131B6C;
+			remoteInfo = GameWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A9C8D3F62C6F525C00131B6C /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				A9C8D3F52C6F525C00131B6C /* GameWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		A98C00D82C6A9D0300E6497F /* BasketballActivity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BasketballActivity.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9C8D3E32C6F525B00131B6C /* GameWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = GameWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9C8D3E52C6F525B00131B6C /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		A9C8D3E72C6F525B00131B6C /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		A9C8D3F92C6F525C00131B6C /* Exceptions for "GameWidget" folder in "GameWidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = A9C8D3E22C6F525B00131B6C /* GameWidgetExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		A98C00DA2C6A9D0300E6497F /* BasketballActivity */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = BasketballActivity;
+			sourceTree = "<group>";
+		};
+		A9C8D3E92C6F525B00131B6C /* GameWidget */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				A9C8D3F92C6F525C00131B6C /* Exceptions for "GameWidget" folder in "GameWidgetExtension" target */,
+			);
+			path = GameWidget;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -26,6 +77,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A9C8D3E02C6F525B00131B6C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9C8D3E82C6F525B00131B6C /* SwiftUI.framework in Frameworks */,
+				A9C8D3E62C6F525B00131B6C /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -33,6 +93,8 @@
 			isa = PBXGroup;
 			children = (
 				A98C00DA2C6A9D0300E6497F /* BasketballActivity */,
+				A9C8D3E92C6F525B00131B6C /* GameWidget */,
+				A9C8D3E42C6F525B00131B6C /* Frameworks */,
 				A98C00D92C6A9D0300E6497F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,8 +103,18 @@
 			isa = PBXGroup;
 			children = (
 				A98C00D82C6A9D0300E6497F /* BasketballActivity.app */,
+				A9C8D3E32C6F525B00131B6C /* GameWidgetExtension.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		A9C8D3E42C6F525B00131B6C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A9C8D3E52C6F525B00131B6C /* WidgetKit.framework */,
+				A9C8D3E72C6F525B00131B6C /* SwiftUI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -55,10 +127,12 @@
 				A98C00D42C6A9D0300E6497F /* Sources */,
 				A98C00D52C6A9D0300E6497F /* Frameworks */,
 				A98C00D62C6A9D0300E6497F /* Resources */,
+				A9C8D3F62C6F525C00131B6C /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				A9C8D3F42C6F525C00131B6C /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				A98C00DA2C6A9D0300E6497F /* BasketballActivity */,
@@ -70,6 +144,28 @@
 			productReference = A98C00D82C6A9D0300E6497F /* BasketballActivity.app */;
 			productType = "com.apple.product-type.application";
 		};
+		A9C8D3E22C6F525B00131B6C /* GameWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A9C8D3FA2C6F525C00131B6C /* Build configuration list for PBXNativeTarget "GameWidgetExtension" */;
+			buildPhases = (
+				A9C8D3DF2C6F525B00131B6C /* Sources */,
+				A9C8D3E02C6F525B00131B6C /* Frameworks */,
+				A9C8D3E12C6F525B00131B6C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				A9C8D3E92C6F525B00131B6C /* GameWidget */,
+			);
+			name = GameWidgetExtension;
+			packageProductDependencies = (
+			);
+			productName = GameWidgetExtension;
+			productReference = A9C8D3E32C6F525B00131B6C /* GameWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -77,11 +173,14 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1600;
+				LastSwiftUpdateCheck = 1610;
 				LastUpgradeCheck = 1600;
 				TargetAttributes = {
 					A98C00D72C6A9D0300E6497F = {
 						CreatedOnToolsVersion = 16.0;
+					};
+					A9C8D3E22C6F525B00131B6C = {
+						CreatedOnToolsVersion = 16.1;
 					};
 				};
 			};
@@ -100,12 +199,20 @@
 			projectRoot = "";
 			targets = (
 				A98C00D72C6A9D0300E6497F /* BasketballActivity */,
+				A9C8D3E22C6F525B00131B6C /* GameWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		A98C00D62C6A9D0300E6497F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9C8D3E12C6F525B00131B6C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -122,7 +229,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A9C8D3DF2C6F525B00131B6C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A9C8D3F42C6F525C00131B6C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A9C8D3E22C6F525B00131B6C /* GameWidgetExtension */;
+			targetProxy = A9C8D3F32C6F525C00131B6C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		A98C00E92C6A9D0400E6497F /* Debug */ = {
@@ -302,6 +424,62 @@
 			};
 			name = Release;
 		};
+		A9C8D3F72C6F525C00131B6C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B3YXFTQFW9;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GameWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = GameWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = app.blur.BasketballActivity.GameWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A9C8D3F82C6F525C00131B6C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B3YXFTQFW9;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GameWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = GameWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = app.blur.BasketballActivity.GameWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -319,6 +497,15 @@
 			buildConfigurations = (
 				A98C00EC2C6A9D0400E6497F /* Debug */,
 				A98C00ED2C6A9D0400E6497F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A9C8D3FA2C6F525C00131B6C /* Build configuration list for PBXNativeTarget "GameWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A9C8D3F72C6F525C00131B6C /* Debug */,
+				A9C8D3F82C6F525C00131B6C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
