@@ -11,13 +11,8 @@ import SwiftUI
 
 struct GameAttributes: ActivityAttributes {
     public struct ContentState: Codable, Hashable {
-        var homeScore: Int
-        var awayScore: Int
-        var scoringTeamName: String
-        var lastAction: String
+        var gameState: GameState
     }
-
-    // Fixed non-changing properties about your activity go here!
     var homeTeam: String
     var awayTeam: String
 }
@@ -25,37 +20,60 @@ struct GameAttributes: ActivityAttributes {
 struct GameLiveActivity: Widget {
     var body: some WidgetConfiguration {
         ActivityConfiguration(for: GameAttributes.self) { context in
-            // Lock screen/banner UI goes here
-            VStack {
-                Text("Hello")
-            }
-            .activityBackgroundTint(Color.cyan)
-            .activitySystemActionForegroundColor(Color.black)
+            LiveActivityView()
 
         } dynamicIsland: { context in
             DynamicIsland {
                 // Expanded UI goes here.  Compose the expanded UI through
                 // various regions, like leading/trailing/center/bottom
                 DynamicIslandExpandedRegion(.leading) {
-                    Text("Leading")
+                    HStack {
+                        Image("warriors")
+                            .teamLogoModifier(frame: 40)
+                        Text("100")
+                            .font(.title)
+                            .fontWeight(.semibold)
+                    }
                 }
                 DynamicIslandExpandedRegion(.trailing) {
-                    Text("Trailing")
+                    HStack {
+                        Text("100")
+                            .font(.title)
+                            .fontWeight(.semibold)
+                        Image("bulls")
+                            .teamLogoModifier(frame: 40)
+                    }
                 }
                 DynamicIslandExpandedRegion(.bottom) {
-                    Text("Bottom ")
-                    // more content
+                    HStack {
+                        Image("warriors")
+                            .teamLogoModifier(frame: 20)
+                        Text("S. Carry drains a 3")
+                            
+                    }
                 }
                 DynamicIslandExpandedRegion(.center) {
-                    Text("Bottom")
+                    Text("5:24 3Q")
                     // more content
                 }
             } compactLeading: {
-                Text("L")
+                HStack {
+                    Image("warriors")
+                        .teamLogoModifier()
+                    Text("100")
+                        .fontWeight(.semibold)
+                }
             } compactTrailing: {
-                Text("T \(context.state.emoji)")
+                HStack {
+                    Text("100")
+                        .fontWeight(.semibold)
+                    
+                    Image("warriors")
+                        .teamLogoModifier()
+                }
             } minimal: {
-                Text(context.state.emoji)
+                Image("warriors")
+                    .teamLogoModifier()
             }
             .widgetURL(URL(string: "http://www.apple.com"))
             .keylineTint(Color.red)
@@ -65,17 +83,17 @@ struct GameLiveActivity: Widget {
 
 extension GameAttributes {
     fileprivate static var preview: GameAttributes {
-        GameAttributes(name: "World")
+        GameAttributes(homeTeam: "some team", awayTeam: "sss")
     }
 }
 
 extension GameAttributes.ContentState {
     fileprivate static var smiley: GameAttributes.ContentState {
-        GameAttributes.ContentState(emoji: "😀")
+        GameAttributes.ContentState(gameState: GameState(homeScore: 1, awayScore: 2, scoringTeamName: "some team", lastAction: "some action"))
      }
      
      fileprivate static var starEyes: GameAttributes.ContentState {
-         GameAttributes.ContentState(emoji: "🤩")
+         GameAttributes.ContentState(gameState: GameState(homeScore: 1, awayScore: 2, scoringTeamName: "some team", lastAction: "some action"))
      }
 }
 

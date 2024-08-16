@@ -51,11 +51,23 @@
 			);
 			target = A9C8D3E22C6F525B00131B6C /* GameWidgetExtension */;
 		};
+		A9C8D3FC2C6F5DB800131B6C /* Exceptions for "BasketballActivity" folder in "GameWidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Assets.xcassets,
+				"Custom Views/Image+Ext.swift",
+				Model/GameState.swift,
+			);
+			target = A9C8D3E22C6F525B00131B6C /* GameWidgetExtension */;
+		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		A98C00DA2C6A9D0300E6497F /* BasketballActivity */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				A9C8D3FC2C6F5DB800131B6C /* Exceptions for "BasketballActivity" folder in "GameWidgetExtension" target */,
+			);
 			path = BasketballActivity;
 			sourceTree = "<group>";
 		};
