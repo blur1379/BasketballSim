@@ -11,12 +11,15 @@ import SwiftUI
 
 struct GameAttributes: ActivityAttributes {
     public struct ContentState: Codable, Hashable {
-        // Dynamic stateful properties about your activity go here!
-        var emoji: String
+        var homeScore: Int
+        var awayScore: Int
+        var scoringTeamName: String
+        var lastAction: String
     }
 
     // Fixed non-changing properties about your activity go here!
-    var name: String
+    var homeTeam: String
+    var awayTeam: String
 }
 
 struct GameLiveActivity: Widget {
@@ -24,7 +27,7 @@ struct GameLiveActivity: Widget {
         ActivityConfiguration(for: GameAttributes.self) { context in
             // Lock screen/banner UI goes here
             VStack {
-                Text("Hello \(context.state.emoji)")
+                Text("Hello")
             }
             .activityBackgroundTint(Color.cyan)
             .activitySystemActionForegroundColor(Color.black)
@@ -40,7 +43,11 @@ struct GameLiveActivity: Widget {
                     Text("Trailing")
                 }
                 DynamicIslandExpandedRegion(.bottom) {
-                    Text("Bottom \(context.state.emoji)")
+                    Text("Bottom ")
+                    // more content
+                }
+                DynamicIslandExpandedRegion(.center) {
+                    Text("Bottom")
                     // more content
                 }
             } compactLeading: {
