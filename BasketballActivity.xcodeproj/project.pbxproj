@@ -56,9 +56,17 @@
 			membershipExceptions = (
 				Assets.xcassets,
 				"Custom Views/Image+Ext.swift",
+				Model/GameAttributes.swift,
 				Model/GameState.swift,
 			);
 			target = A9C8D3E22C6F525B00131B6C /* GameWidgetExtension */;
+		};
+		A9C8D4052C6F94EF00131B6C /* Exceptions for "BasketballActivity" folder in "BasketballActivity" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = A98C00D72C6A9D0300E6497F /* BasketballActivity */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
@@ -66,6 +74,7 @@
 		A98C00DA2C6A9D0300E6497F /* BasketballActivity */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
+				A9C8D4052C6F94EF00131B6C /* Exceptions for "BasketballActivity" folder in "BasketballActivity" target */,
 				A9C8D3FC2C6F5DB800131B6C /* Exceptions for "BasketballActivity" folder in "GameWidgetExtension" target */,
 			);
 			path = BasketballActivity;
@@ -389,6 +398,8 @@
 				DEVELOPMENT_TEAM = B3YXFTQFW9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BasketballActivity/Info.plist;
+				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -418,6 +429,8 @@
 				DEVELOPMENT_TEAM = B3YXFTQFW9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BasketballActivity/Info.plist;
+				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
