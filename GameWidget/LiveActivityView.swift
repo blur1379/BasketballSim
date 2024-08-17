@@ -50,9 +50,6 @@ struct LiveActivityView: View {
                 }
             }
         }
-        .padding()
-        .containerBackground(for: .widget) {
-          
-        }
+
     }
 } 
